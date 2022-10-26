@@ -10,7 +10,11 @@ const keyPlay = e => e.target.style.backgroundColor = 'silver';
 
 // Write a named function with event handler properties
 const keyReturn = e => {
-    e.target.style.backgroundColor = '#fff';
+    if (e.target.className == 'black-key') {
+        e.target.style.backgroundColor = '#141c3a';
+    } else {
+        e.target.style.backgroundColor = '#fff';
+    }
     e.target.innerText = '';
 }
 
@@ -19,6 +23,7 @@ const eventHandlers = note => {
     note.onmousedown = keyPlay;
     note.onmouseup = keyReturn;
 }
+notes.forEach(eventHandlers);
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
