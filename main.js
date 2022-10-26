@@ -50,7 +50,21 @@ nextOne.onclick = () => {
 };
 
 // Write anonymous event handler property and function for the second progress button
-
+nextTwo.onclick = () => {
+    // Change visibility of next buttons
+    nextTwo.hidden = true;
+    nextThree.hidden = false;
+    // Change content of lyric elements
+    document.getElementById('word-five').innerHTML = 'DEAR';
+    document.getElementById('word-six').innerHTML = 'FRI-';
+    // Add last lyric line
+    lastLyric.style.display = 'inline-block';
+    // Change content of letter-note elements
+    document.getElementById('letter-note-three').innerHTML = 'G';
+    document.getElementById('letter-note-four').innerHTML = 'E';
+    document.getElementById('letter-note-five').innerHTML = 'C';
+    document.getElementById('letter-note-six').innerHTML = 'B';
+};
 
 // Write anonymous event handler property and function for the third progress button
 
