@@ -15,9 +15,7 @@ const keyReturn = e => {
 }
 
 // Write a loop that runs the array elements through the function
-const eventHandlers = note => {
-  
-}
+const eventHandlers = note => note.onmousedown = keyPlay;
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
