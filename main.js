@@ -9,10 +9,21 @@ keys.forEach(function(key){
 const keyPlay = e => e.target.style.backgroundColor = 'silver';
 
 // Write a named function with event handler properties
-
+const keyReturn = e => {
+    if (e.target.className == 'black-key') {
+        e.target.style.backgroundColor = '#141c3a';
+    } else {
+        e.target.style.backgroundColor = '#fff';
+    }
+    e.target.innerText = '';
+}
 
 // Write a loop that runs the array elements through the function
-
+const eventHandlers = note => {
+    note.onmousedown = keyPlay;
+    note.onmouseup = keyReturn;
+}
+notes.forEach(eventHandlers);
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
@@ -29,13 +40,54 @@ nextThree.hidden = true;
 startOver.hidden= true;
 
 // Write anonymous event handler property and function for the first progress button
-
+nextOne.onclick = () => {
+    // Change visibility of next buttons
+    nextOne.hidden = true;
+    nextTwo.hidden = false;
+    // Change content of letter-note elements
+    document.getElementById('letter-note-five').innerHTML = 'D';
+    document.getElementById('letter-note-six').innerHTML = 'C';
+};
 
 // Write anonymous event handler property and function for the second progress button
-
+nextTwo.onclick = () => {
+    // Change visibility of next buttons
+    nextTwo.hidden = true;
+    nextThree.hidden = false;
+    // Change content of lyric elements
+    document.getElementById('word-five').innerHTML = 'DEAR';
+    document.getElementById('word-six').innerHTML = 'FRI-';
+    // Add last lyric line
+    lastLyric.style.display = 'inline-block';
+    // Change content of letter-note elements
+    document.getElementById('letter-note-three').innerHTML = 'G';
+    document.getElementById('letter-note-four').innerHTML = 'E';
+    document.getElementById('letter-note-five').innerHTML = 'C';
+    document.getElementById('letter-note-six').innerHTML = 'B';
+};
 
 // Write anonymous event handler property and function for the third progress button
-
+nextThree.onclick = () => {
+    // Change visibility of next buttons
+    nextThree.hidden = true;
+    startOver.hidden = false;
+    // Change content of lyric elements
+    document.getElementById('word-one').innerHTML = 'HAP-';
+    document.getElementById('word-two').innerHTML = 'PY';
+    document.getElementById('word-three').innerHTML = 'BIRTH';
+    document.getElementById('word-four').innerHTML = 'DAY';
+    document.getElementById('word-five').innerHTML = 'TO';
+    document.getElementById('word-six').innerHTML = 'YOU!';
+    // Change content of letter-note elements
+    document.getElementById('letter-note-one').innerHTML = 'F';
+    document.getElementById('letter-note-two').innerHTML = 'F';
+    document.getElementById('letter-note-three').innerHTML = 'E';
+    document.getElementById('letter-note-four').innerHTML = 'C';
+    document.getElementById('letter-note-five').innerHTML = 'D';
+    document.getElementById('letter-note-six').innerHTML = 'C';
+    // Add last lyric line
+    lastLyric.style.display = 'none';
+};
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
