@@ -36,10 +36,19 @@ class Media {
 }
 
 class Book extends Media {
+    // CONSTRUCTOR
     constructor(author, pages, isCheckedOut) {
         super(isCheckedOut);
         this._author = author;
         this._pages = pages;
+    }
+
+    // GETTERS
+    get author() {
+        return this._author;
+    }
+    get pages() {
+        return this._pages;
     }
 }
 
