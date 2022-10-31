@@ -16,7 +16,13 @@ class School {
     static pickSubstituteTeacher() {}
   
     // SETTERS
-    set numberOfStudents(numberOfStudents) { this._numberOfStudents = numberOfStudents }
+    set numberOfStudents(numberOfStudents) {
+        if (typeof numberOfStudents == 'number') {
+          this._numberOfStudents = numberOfStudents;
+        } else {
+          console.log('Invalid input: numberOfStudents must be set to a Number.');
+        }
+    }
 }
 
 class Primary extends School {}
