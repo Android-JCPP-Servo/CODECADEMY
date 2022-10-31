@@ -76,3 +76,7 @@ School.pickSubstituteTeacher(subs);
 // HIGH SCHOOL INSTANCE
 const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
 alSmith.sportsTeams;
+
+// MIDDLE SCHOOL INSTANCE
+const kellyLane = new MiddleSchool('Kelly Lane', 1045, ['Concert Band', 'Jazz Band', 'Martial Arts', 'Robotics']);
+kellyLane.extracurricular;
