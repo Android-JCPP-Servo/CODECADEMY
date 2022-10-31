@@ -63,3 +63,7 @@ const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students m
 lorraineHansbury.quickFacts();
 let subs = ['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli'];
 School.pickSubstituteTeacher(subs);
+
+// HIGH SCHOOL INSTANCE
+const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
+alSmith.sportsTeams;
