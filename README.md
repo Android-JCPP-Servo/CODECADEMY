@@ -10,6 +10,4 @@ Currently, I am working on Codecademy's Full-Stack Web Developer certification.
 My overall goal is to become a freelance Web Developer, so I can create websites for several companies.
 
 ### Current Experience
-+ Vue.js
-+ Standard HTML5/CSS3/JS
-+ Drupal (most recent)
+![vue.js logo](images/vue-logo.png) ![html5, css3, and js logos](images/html-css-js.png) ![drupal logo](drupal.png)
