@@ -43,7 +43,16 @@ class PrimarySchool extends School {
     }
 }
 
-class MiddleSchool extends School {}
+class MiddleSchool extends School {
+    constructor(name, numberOfStudents, extracurricular) {
+        super(name, 'high', numberOfStudents);
+        this._extracurricular = extracurricular;
+    }
+  
+    get extracurricular() {
+        console.log(this._extracurricular);
+    }
+}
 
 class HighSchool extends School {
     // CONSTRUCTOR
