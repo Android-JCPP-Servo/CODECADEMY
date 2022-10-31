@@ -101,3 +101,11 @@ speed.addRating(1);
 speed.addRating(1);
 speed.addRating(5);
 console.log(speed.getAverageRating());
+
+const fourBanger = new CD('Fourbanger', 'Start Your Engines', 86);
+fourBanger.toggleCheckOutStatus();
+console.log(fourBanger.isCheckedOut);
+fourBanger.addRating(5);
+fourBanger.addRating(4);
+fourBanger.addRating(5);
+console.log(fourBanger.getAverageRating());
