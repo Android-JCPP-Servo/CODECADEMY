@@ -30,7 +30,12 @@ class School {
     }
 }
 
-class Primary extends School {}
+class PrimarySchool extends School {
+    constructor(name, level, numberOfStudents, pickupPolicy) {
+        super(name, level, numberOfStudents);
+        this._pickupPolicy = pickupPolicy;
+    }
+}
 
 class Middle extends School {}
 
