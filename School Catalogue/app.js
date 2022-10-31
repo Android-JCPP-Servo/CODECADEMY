@@ -1,6 +1,10 @@
 class School {
     // CONSTRUCTOR
-    constructor(name, level, numberOfStudents) {}
+    constructor(name, level, numberOfStudents) {
+        this._name = name;
+        this._level = level;
+        this._numberOfStudents = numberOfStudents;
+    }
   
     // GETTERS
     get name() { return this._name; }
@@ -9,8 +13,14 @@ class School {
   
     // METHODS
     quickFacts() {}
-    pickSubstituteTeacher() {}
+    static pickSubstituteTeacher() {}
   
     // SETTERS
     set numberOfStudents(numberOfStudents) { this._numberOfStudents = numberOfStudents }
 }
+
+class Primary extends School {}
+
+class Middle extends School {}
+
+class High extends School {}
