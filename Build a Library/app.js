@@ -70,10 +70,19 @@ class Movie extends Media {
 }
 
 class CD extends Media {
+    // CONSTRUCTOR
     constructor(author, title, runTime) {
         super(title);
         this._author = author;
         this._runTime = runTime;
+    }
+
+    // GETTERS
+    get author() {
+        return this._author;
+    }
+    get runTime() {
+        return this._runTime;
     }
 }
 
