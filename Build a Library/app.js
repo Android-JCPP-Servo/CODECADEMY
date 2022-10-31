@@ -35,7 +35,14 @@ class Media {
     }
 }
 
-class Book extends Media {}
+class Book extends Media {
+    constructor(author, title, pages, isCheckedOut) {
+        super(title);
+        this._author = author;
+        this._pages = pages;
+        this._isCheckedOut = isCheckedOut;
+    }
+}
 
 class Movie extends Media {}
 
