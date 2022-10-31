@@ -1,18 +1,22 @@
 class Media {
     constructor(title) {
         this._title = title;
-        this._isCheckedOut = false;
-        this.ratings = 5;
+        this._isCheckedOut;
+        this.ratings;
     }
 
     get title() {
-      return this._title;
+        return this._title;
     }
     get isCheckedOut() {
-      return this.isCheckedOut;
+        return this.isCheckedOut;
     }
     get ratings() {
-      return this.ratings;
+        return this.ratings;
+    }
+
+    set isCheckedOut(isCheckedOut) {
+        this.isCheckedOut = isCheckedOut;
     }
 }
 
