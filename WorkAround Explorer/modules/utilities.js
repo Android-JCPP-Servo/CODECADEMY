@@ -1,6 +1,6 @@
 export function formatNumber(number) {
     // Split the value at the decimal point
-    let str = number.toString().split('.');
+    let str = Math.floor(number).toString().split('.');
 
     // Check length of section before decimal point
     if (str[0].length >= 4) {
