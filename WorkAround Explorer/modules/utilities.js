@@ -7,4 +7,7 @@ export function formatNumber(number) {
         // Add comma after every 3 numbers
         str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1,');
     }
+
+    // Rejoin and return string
+    return str.join('.');
 }
